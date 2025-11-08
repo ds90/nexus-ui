@@ -1,23 +1,24 @@
 "use client";
 
 import { useTheme } from "@/contexts/ThemeContext";
-import { useEffect, useRef, useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Sun, Moon, LaptopMinimalCheck, Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-export default function ThemeToggle() {
-  // ==========================================
-  // HOOKS
-  // ==========================================
+type ThemeToggleProps = {
+  variant?: "default" | "contrast"; // ← NUOVO: prop variant
+};
+
+export default function ThemeToggle({ variant = "default" }: ThemeToggleProps) {
   const { theme, resolvedTheme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // ==========================================
-  // CHIUDI DROPDOWN AL CLICK FUORI
-  // ==========================================
+  const t = useTranslations("ThemeToggle");
+
+  // Chiudi Dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // Se clicco fuori dal dropdown, chiudi
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
@@ -30,64 +31,47 @@ export default function ThemeToggle() {
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     }
-
     // Cleanup: rimuovi listener
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  // ==========================================
   // HANDLER: Cambia theme
-  // ==========================================
   const handleThemeChange = (newTheme: "light" | "dark" | "system") => {
     setTheme(newTheme);
     setIsOpen(false); // Chiudi dropdown dopo selezione
   };
 
-  // ==========================================
-  // ICONA DINAMICA - Mostra icona del theme attivo
-  // ==========================================
   const getIcon = () => {
-    if (theme === "system") {
-      return <LaptopMinimalCheck className="w-6 h-6" />;
-    }
-    return resolvedTheme === "dark" ? (
-      <Moon className="w-6 h-6" />
-    ) : (
-      <Sun className="w-6 h-6" />
-    );
+    if (theme === "system") return LaptopMinimalCheck;
+    return resolvedTheme === "dark" ? Moon : Sun;
   };
 
-  // ==========================================
-  // LABEL - Testo leggibile del theme
-  // ==========================================
-  const getLabel = (themeOption: "light" | "dark" | "system") => {
-    switch (themeOption) {
-      case "light":
-        return "Chiaro";
-      case "dark":
-        return "Scuro";
-      case "system":
-        return "Sistema";
-    }
-  };
+  const Icon = getIcon();
 
-  // ==========================================
-  // RENDER
-  // ==========================================
+  // Stili basati su variant
+  const buttonStyles =
+    variant === "contrast"
+      ? "flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors border border-white/20"
+      : "flex items-center justify-center w-10 h-10 rounded-lg hover:bg-muted transition-colors";
+
   return (
     <div className="relative" ref={dropdownRef}>
-      {/* Bottone Toggle */}
+      {/* Bottone toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-lg hover:bg-muted transation-colors"
-        aria-label="Cambia tema"
+        className={buttonStyles}
+        aria-label="Toggle theme"
       >
-        <span className="text-2xl">{getIcon()}</span>
+        <Icon
+          className={
+            variant === "contrast"
+              ? "w-5 h-5 text-white"
+              : "w-5 h-5 text-foreground"
+          }
+        />
       </button>
 
-      {/* Dropdown Menu */}
+      {/* Dropdown menu */}
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-card border border-border rounded-lg swadow-lg py-1 z-50">
           {/* Opzione: Light */}
@@ -95,10 +79,10 @@ export default function ThemeToggle() {
             onClick={() => handleThemeChange("light")}
             className="w-full px-4 py-2 text-left hover:bg-muted flex items-center justify-between transition-colors"
           >
-            <span className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <Sun className="w-5 h-5" />
-              <span className="text-foreground">{getLabel("light")}</span>
-            </span>
+              <span className="text-sm">{t("light")}</span>
+            </div>
             {theme === "light" && <Check className="text-secondary" />}
           </button>
 
@@ -107,12 +91,10 @@ export default function ThemeToggle() {
             onClick={() => handleThemeChange("dark")}
             className="w-full px-4 py-2 text-left hover:bg-muted flex items-center justify-between transition-colors"
           >
-            <span className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <Moon className="w-5 h-5" />
-              <span className="text-foreground">
-                {getLabel("dark")}
-              </span>
-            </span>
+              <span className="text-sm">{t("dark")}</span>
+            </div>
             {theme === "dark" && <Check className="text-primary" />}
           </button>
 
@@ -121,13 +103,11 @@ export default function ThemeToggle() {
             onClick={() => handleThemeChange("system")}
             className="w-full px-4 py-2 text-left hover:bg-muted flex items-center justify-between transition-colors"
           >
-            <span className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <LaptopMinimalCheck className="w-5 h-5" />
-              <span className="text-foreground">
-                {getLabel("system")}
-              </span>
-            </span>
-            {theme === "system" && <Check className="text-fixed-secondary"/>}
+              <span className="text-sm">{t("system")}</span>
+            </div>
+            {theme === "system" && <Check className="text-fixed-secondary" />}
           </button>
         </div>
       )}

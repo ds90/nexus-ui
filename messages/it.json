@@ -38,13 +38,7 @@
     "button_login": "Accedi",
     "button_loading": "Accesso in corso...",
     "no_account": "Non hai un account?",
-    "register_link": "Registrati ora",
-    "errors": {
-      "email_required": "Email obbligatoria",
-      "email_invalid": "Email non valida",
-      "password_required": "Password obbligatoria",
-      "password_min": "Password troppo corta (min 8 caratteri)"
-    }
+    "register_link": "Registrati ora"
   },
   "SupportPage": {
     "title": "Supporto",
@@ -58,5 +52,13 @@
     "light": "Chiaro",
     "dark": "Scuro",
     "system": "Sistema"
+  },
+  "Errors": {
+    "email_required": "Email obbligatoria",
+    "email_invalid": "Email non valida",
+    "password_required": "Password obbligatoria",
+    "password_min": "Password troppo corta (min 8 caratteri)",
+    "login": "Email o password non corretti.",
+    "connection": "Errore di connessione. Riprova."
   }
 }

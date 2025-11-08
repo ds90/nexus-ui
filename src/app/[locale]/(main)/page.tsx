@@ -15,7 +15,7 @@ export default function HomePage() {
           >
             Inizia Gratis
           </a>
-          <a href="/prezzi"
+          <a href="/price"
             className="bg-white text-primary border-2 border-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
           >
             Vedi Prezzi

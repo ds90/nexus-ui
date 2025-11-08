@@ -38,13 +38,7 @@
     "button_login": "Login",
     "button_loading": "Logging in...",
     "no_account": "Don't have an account?",
-    "register_link": "Sign up now",
-    "errors": {
-      "email_required": "Email is required",
-      "email_invalid": "Invalid email",
-      "password_required": "Password is required",
-      "password_min": "Password too short (min 8 characters)"
-    }
+    "register_link": "Sign up now"
   },
   "SupportPage": {
     "title": "Support",
@@ -58,5 +52,13 @@
     "light": "Light",
     "dark": "Dark",
     "system": "System"
+  },
+  "Errors": {
+    "email_required": "Email is required",
+    "email_invalid": "Invalid email",
+    "password_required": "Password is required",
+    "password_min": "Password too short (min 8 characters)",
+    "login": "Incorrect email or password.",
+    "connection": "Connection error. Please try again."
   }
 }

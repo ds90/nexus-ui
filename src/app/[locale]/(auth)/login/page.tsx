@@ -3,9 +3,12 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { authApi } from "@/lib/api/auth";
 import { Eye, EyeOff } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function LoginPage() {
   const router = useRouter();
+  const t = useTranslations("LoginPage")
+  const te = useTranslations("Error")
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +24,7 @@ export default function LoginPage() {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(value)) {
-      setEmailError("Formato email non valido.");
+      setEmailError(te("email_invalid"));
     } else {
       setEmailError("");
     }
@@ -50,11 +53,11 @@ export default function LoginPage() {
       router.push("/");
     } catch (error: any) {
       if (error.response?.status === 401) {
-        setLoginError("Email o password non corretti.");
+        setLoginError(te("login"));
       } else if (error.response?.data?.message) {
         setLoginError(error.response.data.message);
       } else {
-        setLoginError("Errore di connessione. Riprova.");
+        setLoginError(te("connection"));
       }
     } finally {
       setIsLoading(false);
@@ -64,9 +67,9 @@ export default function LoginPage() {
   return (
     <div className="w-full max-w-md">
       <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
-        <h1 className="text-3xl font-bold text-foreground mb-2">Accedi</h1>
+        <h1 className="text-3xl font-bold text-foreground mb-2">{t("title")}</h1>
         <p className="text-muted-foreground mb-6">
-          Inserisci le tue credenziali
+          {t("subtitle")}
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Errore login */}
@@ -79,7 +82,7 @@ export default function LoginPage() {
           {/* Campo email */}
           <div>
             <label className="block text-foreground mb-1 font-medium">
-              Email
+              {t("email_label")}
             </label>
             <input
               type="email"
@@ -92,7 +95,7 @@ export default function LoginPage() {
                   : "focus:ring-2 focus:ring-ring"
               }`}
               required
-              placeholder="nome@example.com"
+              placeholder={t("email_placeholder")}
             />
             {emailError && (
               <p className="text-red-500 dark:text-red-400 text-sm mt-1">
@@ -104,7 +107,7 @@ export default function LoginPage() {
           {/* Campo password */}
           <div>
             <label className="block text-foreground mb-1 font-medium">
-              Password
+              {t("password_label")}
             </label>
             <div className="relative">
               <input
@@ -114,7 +117,7 @@ export default function LoginPage() {
                 disabled={isLoading}
                 className="w-full rounded-md border border-border px-3 py-2 bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-border transition-colors"
                 required
-                placeholder="********"
+                placeholder={t("password_placeholder")}
               />
               <button
                 type="button"
@@ -140,7 +143,7 @@ export default function LoginPage() {
                 : "bg-primary hover:bg-primary/90"
             }`}
           >
-            {isLoading ? "Accesso in corso ..." : "Accedi"}
+            {isLoading ? t("button_loading") : t("button_login")}
           </button>
         </form>
       </div>

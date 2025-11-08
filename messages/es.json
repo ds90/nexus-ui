@@ -38,13 +38,7 @@
     "button_login": "Iniciar Sesión",
     "button_loading": "Iniciando sesión...",
     "no_account": "¿No tienes una cuenta?",
-    "register_link": "Regístrate ahora",
-    "errors": {
-      "email_required": "El correo es obligatorio",
-      "email_invalid": "Correo no válido",
-      "password_required": "La contraseña es obligatoria",
-      "password_min": "Contraseña demasiado corta (mín 8 caracteres)"
-    }
+    "register_link": "Regístrate ahora"
   },
   "SupportPage": {
     "title": "Soporte",
@@ -58,5 +52,13 @@
     "light": "Claro",
     "dark": "Oscuro",
     "system": "Sistema"
+  },
+  "Errors": {
+    "email_required": "El correo es obligatorio",
+    "email_invalid": "Correo no válido",
+    "password_required": "La contraseña es obligatoria",
+    "password_min": "Contraseña demasiado corta (mín 8 caracteres)",
+    "login": "Correo electrónico o contraseña incorrectos.",
+    "connection": "Error de conexión. Inténtalo de nuevo."
   }
 }
