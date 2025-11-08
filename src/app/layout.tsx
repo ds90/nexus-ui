@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Gestione progetti e team | Nexus",
-  description:
-    "Platform for Project Managers to streamline workflows and enhance productivity.",
-};
+  title: 'Nexus - Project Management Platform',
+  description: 'Modern project management platform for teams',
+}
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode
 }>) {
-  return (
-    <html lang="it">
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  );
+    return (
+        <html suppressHydrationWarning>
+            <body>
+                <ThemeProvider>{children}</ThemeProvider>
+            </body>
+
+        </html>
+    )
 }

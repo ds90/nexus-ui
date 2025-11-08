@@ -1,0 +1,62 @@
+{
+  "Navbar": {
+    "home": "Inicio",
+    "support": "Soporte",
+    "pricing": "Precios",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Bienvenido a Nexus",
+      "subtitle": "La plataforma moderna de gestión de proyectos para equipos que quieren trabajar mejor.",
+      "cta_start": "Comenzar Gratis",
+      "cta_pricing": "Ver Precios"
+    },
+    "features": {
+      "projects": {
+        "title": "Gestión de Proyectos",
+        "description": "Organiza y rastrea tus proyectos con facilidad."
+      },
+      "collaboration": {
+        "title": "Colaboración en Equipo",
+        "description": "Trabaja junto con tu equipo en tiempo real."
+      },
+      "performance": {
+        "title": "Rápido y Potente",
+        "description": "Alto rendimiento para equipos de cualquier tamaño."
+      }
+    }
+  },
+  "LoginPage": {
+    "title": "Iniciar Sesión",
+    "subtitle": "¡Bienvenido de nuevo! Inicia sesión en tu cuenta",
+    "email_label": "Correo Electrónico",
+    "email_placeholder": "tu@email.com",
+    "password_label": "Contraseña",
+    "password_placeholder": "Tu contraseña",
+    "button_login": "Iniciar Sesión",
+    "button_loading": "Iniciando sesión...",
+    "no_account": "¿No tienes una cuenta?",
+    "register_link": "Regístrate ahora",
+    "errors": {
+      "email_required": "El correo es obligatorio",
+      "email_invalid": "Correo no válido",
+      "password_required": "La contraseña es obligatoria",
+      "password_min": "Contraseña demasiado corta (mín 8 caracteres)"
+    }
+  },
+  "SupportPage": {
+    "title": "Soporte",
+    "subtitle": "Página de soporte - por implementar"
+  },
+  "PricingPage": {
+    "title": "Precios",
+    "subtitle": "Página de precios - por implementar"
+  },
+  "ThemeToggle": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  }
+}

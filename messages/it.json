@@ -1,0 +1,62 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "support": "Supporto",
+    "pricing": "Prezzo",
+    "login": "Accedi",
+    "register": "Registrati"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Benvenuto in Nexus",
+      "subtitle": "La piattaforma di project management moderna per team che vogliono lavorare meglio.",
+      "cta_start": "Inizia Gratis",
+      "cta_pricing": "Vedi Prezzi"
+    },
+    "features": {
+      "projects": {
+        "title": "Gestione Progetti",
+        "description": "Organizza e traccia i tuoi progetti con facilità."
+      },
+      "collaboration": {
+        "title": "Collaborazione Team",
+        "description": "Lavora insieme al tuo team in tempo reale."
+      },
+      "performance": {
+        "title": "Veloce e Potente",
+        "description": "Prestazioni elevate per team di ogni dimensione."
+      }
+    }
+  },
+  "LoginPage": {
+    "title": "Accedi",
+    "subtitle": "Bentornato! Accedi al tuo account",
+    "email_label": "Email",
+    "email_placeholder": "tua@email.com",
+    "password_label": "Password",
+    "password_placeholder": "La tua password",
+    "button_login": "Accedi",
+    "button_loading": "Accesso in corso...",
+    "no_account": "Non hai un account?",
+    "register_link": "Registrati ora",
+    "errors": {
+      "email_required": "Email obbligatoria",
+      "email_invalid": "Email non valida",
+      "password_required": "Password obbligatoria",
+      "password_min": "Password troppo corta (min 8 caratteri)"
+    }
+  },
+  "SupportPage": {
+    "title": "Supporto",
+    "subtitle": "Pagina supporto - da implementare"
+  },
+  "PricingPage": {
+    "title": "Prezzi",
+    "subtitle": "Pagina prezzi - da implementare"
+  },
+  "ThemeToggle": {
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "system": "Sistema"
+  }
+}

@@ -6,7 +6,7 @@ import ThemeToggle from "../ui/ThemeToggle";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors">
+    <nav className="bg-card border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -16,13 +16,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/support"
-              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors"
+              className="text-foreground hover:bg-muted px-4 py-2 rounded-lg transition-colors"
             >
               Supporto
             </Link>
             <Link
               href="/price"
-              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors"
+              className="text-foreground hover:bg-muted px-4 py-2 rounded-lg transition-colors"
             >
               Prezzi
             </Link>
@@ -32,13 +32,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/login"
-              className="text-primary dark:text-secondary hover:text-primary/80 dark:hover:text-secondary/80 transition-colors font-medium"
+              className="text-foreground hover:bg-muted px-4 py-2 rounded-lg transition-colors font-medium"
             >
               Accedi
             </Link>
             <Link
               href="/register"
-              className="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-secondary/90 transition-colors font-medium"
+              className="bg-fixed-secondary text-white px-4 py-2 rounded-lg transform hover:scale-105 hover:shadow-md transition-all duration-200              font-medium"
             >
               Registrati
             </Link>

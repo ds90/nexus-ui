@@ -1,0 +1,62 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "support": "Support",
+    "pricing": "Pricing",
+    "login": "Login",
+    "register": "Sign Up"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Welcome to Nexus",
+      "subtitle": "The modern project management platform for teams who want to work better.",
+      "cta_start": "Get Started Free",
+      "cta_pricing": "View Pricing"
+    },
+    "features": {
+      "projects": {
+        "title": "Project Management",
+        "description": "Organize and track your projects with ease."
+      },
+      "collaboration": {
+        "title": "Team Collaboration",
+        "description": "Work together with your team in real-time."
+      },
+      "performance": {
+        "title": "Fast and Powerful",
+        "description": "High performance for teams of any size."
+      }
+    }
+  },
+  "LoginPage": {
+    "title": "Login",
+    "subtitle": "Welcome back! Log in to your account",
+    "email_label": "Email",
+    "email_placeholder": "your@email.com",
+    "password_label": "Password",
+    "password_placeholder": "Your password",
+    "button_login": "Login",
+    "button_loading": "Logging in...",
+    "no_account": "Don't have an account?",
+    "register_link": "Sign up now",
+    "errors": {
+      "email_required": "Email is required",
+      "email_invalid": "Invalid email",
+      "password_required": "Password is required",
+      "password_min": "Password too short (min 8 characters)"
+    }
+  },
+  "SupportPage": {
+    "title": "Support",
+    "subtitle": "Support page - to be implemented"
+  },
+  "PricingPage": {
+    "title": "Pricing",
+    "subtitle": "Pricing page - to be implemented"
+  },
+  "ThemeToggle": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
