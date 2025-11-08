@@ -51,7 +51,6 @@
     --fixed-secondary: #2ecc71; /* Secondary fisso */
   }
 }
-
 /* Reset base */
 * {
   margin: 0;
@@ -63,4 +62,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
   @apply bg-background text-foreground;
+}
+
+html, body {
+  height: 100%;
+  overflow-y: auto;
 }

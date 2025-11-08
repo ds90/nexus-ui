@@ -7,6 +7,8 @@ import { useTranslations } from "next-intl";
 
 export default function LoginPage() {
   const router = useRouter();
+  {/* Traduzioni */}
+  const g = useTranslations("General")
   const t = useTranslations("LoginPage")
   const te = useTranslations("Error")
 
@@ -67,7 +69,7 @@ export default function LoginPage() {
   return (
     <div className="w-full max-w-md">
       <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
-        <h1 className="text-3xl font-bold text-foreground mb-2">{t("title")}</h1>
+        <h1 className="text-3xl font-bold text-foreground mb-2">{g("login")}</h1>
         <p className="text-muted-foreground mb-6">
           {t("subtitle")}
         </p>
@@ -82,7 +84,7 @@ export default function LoginPage() {
           {/* Campo email */}
           <div>
             <label className="block text-foreground mb-1 font-medium">
-              {t("email_label")}
+              {g("email")}
             </label>
             <input
               type="email"
@@ -95,7 +97,7 @@ export default function LoginPage() {
                   : "focus:ring-2 focus:ring-ring"
               }`}
               required
-              placeholder={t("email_placeholder")}
+              placeholder={g("email_placeholder")}
             />
             {emailError && (
               <p className="text-red-500 dark:text-red-400 text-sm mt-1">
@@ -107,7 +109,7 @@ export default function LoginPage() {
           {/* Campo password */}
           <div>
             <label className="block text-foreground mb-1 font-medium">
-              {t("password_label")}
+              {g("password")}
             </label>
             <div className="relative">
               <input
@@ -117,7 +119,7 @@ export default function LoginPage() {
                 disabled={isLoading}
                 className="w-full rounded-md border border-border px-3 py-2 bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-border transition-colors"
                 required
-                placeholder={t("password_placeholder")}
+                placeholder={g("password_placeholder")}
               />
               <button
                 type="button"
@@ -143,7 +145,7 @@ export default function LoginPage() {
                 : "bg-primary hover:bg-primary/90"
             }`}
           >
-            {isLoading ? t("button_loading") : t("button_login")}
+            {isLoading ? t("button_loading") : g("login")}
           </button>
         </form>
       </div>

@@ -1,11 +1,16 @@
 {
-  "Navbar": {
-    "home": "Home",
+  "General": {
     "support": "Support",
-    "pricing": "Pricing",
     "login": "Login",
-    "register": "Sign Up"
+    "register": "Sign Up",
+    "email": "Email",
+    "email_placeholder": "your@email.com",
+    "password": "Password",
+    "password_placeholder": "Your password",
+    "pricing": "Pricing",
+    "termsService": "Terms of Service"
   },
+  "Navbar": {},
   "HomePage": {
     "hero": {
       "title": "Welcome to Nexus",
@@ -29,36 +34,63 @@
     }
   },
   "LoginPage": {
-    "title": "Login",
     "subtitle": "Welcome back! Log in to your account",
-    "email_label": "Email",
-    "email_placeholder": "your@email.com",
-    "password_label": "Password",
-    "password_placeholder": "Your password",
-    "button_login": "Login",
     "button_loading": "Logging in...",
     "no_account": "Don't have an account?",
     "register_link": "Sign up now"
   },
   "SupportPage": {
-    "title": "Support",
     "subtitle": "Support page - to be implemented"
   },
   "PricingPage": {
-    "title": "Pricing",
     "subtitle": "Pricing page - to be implemented"
   },
   "ThemeToggle": {
+    "theme": "Theme",
     "light": "Light",
     "dark": "Dark",
     "system": "System"
   },
+  "RegisterPage": {
+    "title": "Sign up",
+    "lastName": "Surname",
+    "firstName": "Name",
+    "isOrganization": "Are you a company?",
+    "organization": "Company",
+    "google": "Continue with Google",
+    "cta_login": "Do you already have an account?"
+  },
   "Errors": {
-    "email_required": "Email is required",
-    "email_invalid": "Invalid email",
-    "password_required": "Password is required",
-    "password_min": "Password too short (min 8 characters)",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email",
+    "firstNameRequired": "First name is required",
+    "firstNameTooShort": "First name must be at least 2 characters",
+    "lastNameRequired": "Last name is required",
+    "lastNameTooShort": "Last name must be at least 2 characters",
+    "passwordRequired": "Password is required",
+    "passwordTooShort": "Password must be at least 8 characters",
+    "passwordWeak": "Password must contain one uppercase, one lowercase and one number",
+    "organizationRequired": "Organization name is required",
+    "organizationTooShort": "Organization name must be at least 3 characters",
+    "registrationFailed": "Registration failed. Please try again later.",
     "login": "Incorrect email or password.",
     "connection": "Connection error. Please try again."
+  },
+
+  "TermsPage": {
+    "lastUpdated": "Last updated",
+    "introduction": "Welcome to Nexus. By using our services, you agree to be bound by these Terms of Service. Please read them carefully.",
+    "section1Title": "Acceptance of Terms",
+    "section1Content": "By accessing and using Nexus, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use our services.",
+    "section2Title": "Service Description",
+    "section2Content": "Nexus is a SaaS project management platform that enables users to organize, collaborate, and manage their projects efficiently. We reserve the right to modify, suspend, or discontinue any part of the service at any time.",
+    "section3Title": "User Account",
+    "section3Content": "To use Nexus, you must create an account by providing accurate and complete information. You are responsible for maintaining the security of your account and all activities that occur under your account. Please notify us immediately of any unauthorized use of your account.",
+    "section4Title": "Acceptable Use",
+    "section4Content": "You agree to use Nexus only for lawful purposes and in accordance with these Terms. You must not use the service for illegal, harmful, or activities that violate the rights of others.",
+    "section5Title": "Limitation of Liability",
+    "section5Content": "Nexus is provided 'as is' without warranties of any kind. We will not be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the service.",
+    "contactTitle": "Contact Us",
+    "contactContent": "For questions about the Terms of Service, contact us at:"
   }
 }

@@ -1,25 +1,31 @@
+"use client";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+
 export default function HomePage() {
+  const t = useTranslations("HomePage");
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 min-h-screen bg overflow-y-auto">
       {/* Hero Section */}
       <div className="text-center space-y-6">
-        <h1 className="text-5xl font-bold text-primary">
-          Benvenuto in Nexus
-        </h1>
+        <h1 className="text-5xl font-bold text-primary">{t("hero.title")}</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          La piattaforma di project management moderna per team che vogliono lavorare meglio.
+          {t("hero.subtitle")}
         </p>
         <div className="flex gap-4 justify-center pt-8">
-          <a href="/register"
-            className="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-colors"
+          <Link
+            href="/register"
+            className="bg-fixed-secondary text-white px-4 py-2 rounded-lg transform hover:scale-105 hover:shadow-md transition-all duration-200 font-medium"
           >
-            Inizia Gratis
-          </a>
-          <a href="/price"
-            className="bg-white text-primary border-2 border-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+            {t("hero.cta_start")}
+          </Link>
+          <Link
+            href="/price"
+            className="text-foreground hover:bg-muted px-4 py-2 rounded-lg transition-colors"
           >
-            Vedi Prezzi
-          </a>
+            {t("hero.cta_pricing")}
+          </Link>
         </div>
       </div>
 
@@ -41,7 +47,7 @@ export default function HomePage() {
           <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
             <span className="text-2xl">👥</span>
           </div>
-           <h3 className="text-xl font-semibold text-primary mb-2">
+          <h3 className="text-xl font-semibold text-primary mb-2">
             Collaborazione Team
           </h3>
           <p className="text-gray-600">
@@ -62,5 +68,5 @@ export default function HomePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

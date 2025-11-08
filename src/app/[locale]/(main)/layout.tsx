@@ -8,7 +8,7 @@ export default function MainLayout({
     return (
         <>
             <Navbar />
-            <main className="min-h-screen">
+            <main className="min-h-screen bg overflow-y-auto">
                 {children}
             </main>
         </>

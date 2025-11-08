@@ -1,11 +1,16 @@
 {
-  "Navbar": {
-    "home": "Home",
+  "General": {
     "support": "Supporto",
-    "pricing": "Prezzo",
     "login": "Accedi",
-    "register": "Registrati"
+    "register": "Registrati",
+    "email": "Email",
+    "email_placeholder": "tua@email.com",
+    "password": "Password",
+    "password_placeholder": "La tua password",
+    "pricing": "Prezzi",
+    "termsService": "Termini di Servizio"
   },
+  "Navbar": {},
   "HomePage": {
     "hero": {
       "title": "Benvenuto in Nexus",
@@ -29,36 +34,63 @@
     }
   },
   "LoginPage": {
-    "title": "Accedi",
     "subtitle": "Bentornato! Accedi al tuo account",
-    "email_label": "Email",
-    "email_placeholder": "tua@email.com",
-    "password_label": "Password",
-    "password_placeholder": "La tua password",
-    "button_login": "Accedi",
     "button_loading": "Accesso in corso...",
     "no_account": "Non hai un account?",
     "register_link": "Registrati ora"
   },
   "SupportPage": {
-    "title": "Supporto",
     "subtitle": "Pagina supporto - da implementare"
   },
   "PricingPage": {
-    "title": "Prezzi",
     "subtitle": "Pagina prezzi - da implementare"
   },
   "ThemeToggle": {
+    "theme": "Tema",
     "light": "Chiaro",
     "dark": "Scuro",
     "system": "Sistema"
   },
+  "RegisterPage": {
+    "title": "Iscriviti",
+    "lastName": "Cognnome",
+    "firstName": "Nome",
+    "isOrganization": "Sei un Azienda",
+    "organization": "Azienda",
+    "google": "Continua con Google",
+    "cta_login": "Hai gia un account?"
+  },
   "Errors": {
-    "email_required": "Email obbligatoria",
-    "email_invalid": "Email non valida",
-    "password_required": "Password obbligatoria",
-    "password_min": "Password troppo corta (min 8 caratteri)",
+    "emailRequired": "L'email è obbligatoria",
+    "emailInvalid": "Inserisci un'email valida",
+    "firstNameRequired": "Il nome è obbligatorio",
+    "firstNameTooShort": "Il nome deve contenere almeno 2 caratteri",
+    "lastNameRequired": "Il cognome è obbligatorio",
+    "lastNameTooShort": "Il cognome deve contenere almeno 2 caratteri",
+    "passwordRequired": "La password è obbligatoria",
+    "passwordTooShort": "La password deve contenere almeno 8 caratteri",
+    "passwordWeak": "La password deve contenere una maiuscola, una minuscola e un numero",
+    "organizationRequired": "Il nome dell'organizzazione è obbligatorio",
+    "organizationTooShort": "Il nome dell'organizzazione deve contenere almeno 3 caratteri",
+    "registrationFailed": "Registrazione fallita. Riprova più tardi.",
     "login": "Email o password non corretti.",
     "connection": "Errore di connessione. Riprova."
+  },
+
+  "TermsPage": {    
+    "lastUpdated": "Ultimo aggiornamento",
+    "introduction": "Benvenuto su Nexus. Utilizzando i nostri servizi, accetti di essere vincolato da questi Termini di Servizio. Si prega di leggerli attentamente.",
+    "section1Title": "Accettazione dei Termini",
+    "section1Content": "Accedendo e utilizzando Nexus, accetti di essere vincolato da questi Termini di Servizio e dalla nostra Informativa sulla Privacy. Se non accetti questi termini, non utilizzare i nostri servizi.",
+    "section2Title": "Descrizione del Servizio",
+    "section2Content": "Nexus è una piattaforma di gestione progetti SaaS che consente agli utenti di organizzare, collaborare e gestire i propri progetti in modo efficiente. Ci riserviamo il diritto di modificare, sospendere o interrompere qualsiasi parte del servizio in qualsiasi momento.",
+    "section3Title": "Account Utente",
+    "section3Content": "Per utilizzare Nexus, devi creare un account fornendo informazioni accurate e complete. Sei responsabile di mantenere la sicurezza del tuo account e di tutte le attività che si verificano sul tuo account. Notificaci immediatamente qualsiasi uso non autorizzato del tuo account.",
+    "section4Title": "Utilizzo Accettabile",
+    "section4Content": "Accetti di utilizzare Nexus solo per scopi legali e in conformità con questi Termini. Non devi utilizzare il servizio per attività illegali, dannose o che violano i diritti di terzi.",
+    "section5Title": "Limitazione di Responsabilità",
+    "section5Content": "Nexus è fornito 'così com'è' senza garanzie di alcun tipo. Non saremo responsabili per danni diretti, indiretti, incidentali o consequenziali derivanti dall'uso o dall'impossibilità di utilizzare il servizio.",
+    "contactTitle": "Contattaci",
+    "contactContent": "Per domande sui Termini di Servizio, contattaci a:"
   }
 }

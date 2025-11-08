@@ -6,15 +6,19 @@ import { Sun, Moon, LaptopMinimalCheck, Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 type ThemeToggleProps = {
-  variant?: "default" | "contrast"; // ← NUOVO: prop variant
+  variant?: "default" | "contrast";
 };
 
 export default function ThemeToggle({ variant = "default" }: ThemeToggleProps) {
   const { theme, resolvedTheme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
   const t = useTranslations("ThemeToggle");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Chiudi Dropdown
   useEffect(() => {
@@ -42,6 +46,9 @@ export default function ThemeToggle({ variant = "default" }: ThemeToggleProps) {
   };
 
   const getIcon = () => {
+    if (!mounted) {
+      return LaptopMinimalCheck;
+    }
     if (theme === "system") return LaptopMinimalCheck;
     return resolvedTheme === "dark" ? Moon : Sun;
   };

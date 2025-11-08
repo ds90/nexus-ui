@@ -3,17 +3,12 @@
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { Globe, Check } from "lucide-react";
+import { languages } from "@/datas/languages";
 import type { Locale } from "@/i18n";
 
 type LanguageSelectorProps = {
   variant?: "default" | "contrast";
 };
-
-const languages = [
-  { code: "it" as Locale, name: "Italiano", flag: "🇮🇹" },
-  { code: "en" as Locale, name: "English", flag: "🇬🇧" },
-  { code: "es" as Locale, name: "Español", flag: "🇪🇸" },
-];
 
 export default function LanguageSelector({
   variant = "default",
