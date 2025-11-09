@@ -42,8 +42,9 @@
   "LoginPage": {
     "subtitle": "Welcome back! Log in to your account",
     "button_loading": "Logging in...",
-    "no_account": "Don't have an account?",
-    "register_link": "Sign up now"
+    "noAccount": "Don't have an account?",
+    "register_link": "Sign up now",
+    "loginWithGoogle": "Sign in with Google"    
   },
   "SupportPage": {
     "subtitle": "Support page - to be implemented"

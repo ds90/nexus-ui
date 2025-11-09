@@ -24,7 +24,7 @@ export interface AuthResponse {
   user?: {
     userId: number;
     email: string;
-    firsName: string;
+    firstName: string;
     lastName: string;
     fullName: string;
     organizationId: number;

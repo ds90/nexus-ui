@@ -42,8 +42,9 @@
   "LoginPage": {
     "subtitle": "Bentornato! Accedi al tuo account",
     "button_loading": "Accesso in corso...",
-    "no_account": "Non hai un account?",
-    "register_link": "Registrati ora"
+    "noAccount": "Non hai un account?",
+    "register_link": "Registrati ora",
+    "loginWithGoogle": "Accedi con Google"    
   },
   "SupportPage": {
     "subtitle": "Pagina supporto - da implementare"

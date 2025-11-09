@@ -42,8 +42,10 @@
   "LoginPage": {
     "subtitle": "¡Bienvenido de nuevo! Inicia sesión en tu cuenta",
     "button_loading": "Iniciando sesión...",
-    "no_account": "¿No tienes una cuenta?",
+    "noAccount": "¿No tienes una cuenta?",
     "register_link": "Regístrate ahora"
+    ,
+    "loginWithGoogle": "Iniciar sesión con Google"    
   },
   "SupportPage": {
     "subtitle": "Página de soporte - por implementar"

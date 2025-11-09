@@ -11,7 +11,7 @@ export default function RegisterPage() {
 
   const g = useTranslations("General");
   const d = useTranslations("Dictionary");
-  const e = useTranslations("Error");
+  const et = useTranslations("Error");
   const p = useTranslations("Placeholder");
   const t = useTranslations("RegisterPage");
 
@@ -24,12 +24,12 @@ export default function RegisterPage() {
   // Validazione email
   const validateEmail = (email: string): boolean => {
     if (!email) {
-      setEmailError(e("emailRequired"));
+      setEmailError(et("emailRequired"));
       return false;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setEmail(e("emailInvalid"));
+      setEmailError(et("emailInvalid"));
       return false;
     }
     setEmailError("");
@@ -115,10 +115,13 @@ export default function RegisterPage() {
               type="email"
               value={email}
               onChange={(e) => {
-                setEmail(e.target.value);
-                if (emailError) validateEmail(e.target.value);
+                setEmail(e.target.value);               
               }}
-              onBlur={() => validateEmail(email)}
+              onBlur={() => {
+                if(email){
+                  validateEmail(email)
+                }
+              }}
               disabled={isLoading}
               placeholder={p("email")}
               className={`w-full px-4 py-3 bg-background border-2 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 transition-all ${
