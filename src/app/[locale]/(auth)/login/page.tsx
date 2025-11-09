@@ -10,7 +10,7 @@ export default function LoginPage() {
   {/* Traduzioni */}
   const g = useTranslations("General")
   const t = useTranslations("LoginPage")
-  const te = useTranslations("Error")
+  const te = useTranslations("Errors")
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,7 +26,7 @@ export default function LoginPage() {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(value)) {
-      setEmailError(te("email_invalid"));
+      setEmailError(te("emailInvalid"));
     } else {
       setEmailError("");
     }
@@ -52,7 +52,7 @@ export default function LoginPage() {
       }
 
       // Redirect
-      router.push("/");
+      router.push("/dashboard");
     } catch (error: any) {
       if (error.response?.status === 401) {
         setLoginError(te("login"));
