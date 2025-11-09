@@ -11,8 +11,9 @@ export default function RegisterPage() {
 
   const g = useTranslations("General");
   const d = useTranslations("Dictionary");
+  const e = useTranslations("Error");
+  const p = useTranslations("Placeholder");
   const t = useTranslations("RegisterPage");
-  const te = useTranslations("Errors");
 
   const locale = pathname.split("/")[1];
 
@@ -23,12 +24,12 @@ export default function RegisterPage() {
   // Validazione email
   const validateEmail = (email: string): boolean => {
     if (!email) {
-      setEmailError(te("emailRequired"));
+      setEmailError(e("emailRequired"));
       return false;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setEmail(te("emailInvalid"));
+      setEmail(e("emailInvalid"));
       return false;
     }
     setEmailError("");
@@ -119,7 +120,7 @@ export default function RegisterPage() {
               }}
               onBlur={() => validateEmail(email)}
               disabled={isLoading}
-              placeholder={g("email_placeholder")}
+              placeholder={p("email")}
               className={`w-full px-4 py-3 bg-background border-2 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 transition-all ${
                 emailError
                   ? "border-red-500 focus:ring-red-500 focus:border-red-500"
@@ -149,14 +150,14 @@ export default function RegisterPage() {
               href={`/${locale}/terms`}
               className="text-primary hover:underline font-medium"
             >
-              {d("termsOfService")}
+              {g("termsOfService")}
             </Link>{" "}
             {d("and")}{" "}
             <Link
               href={`/${locale}/privacy`}
               className="text-primary hover:underline font-medium"
             >
-              {d("privacyPolicy")}
+              {g("privacyPolicy")}
             </Link>
           </p>
         </div>
@@ -170,7 +171,7 @@ export default function RegisterPage() {
             href={`/${locale}/login`}
             className="text-primary hover:underline font-semibold"
           >
-            {g("login")}
+            {d("login")}
           </Link>
         </p>
       </div>

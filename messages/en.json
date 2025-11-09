@@ -1,21 +1,20 @@
 {
   "General": {
-    "support": "Support",
-    "login": "Login",
-    "register": "Sign Up",
-    "email": "Email",
-    "email_placeholder": "your@email.com",
-    "password": "Password",
-    "password_placeholder": "Your password",
-    "pricing": "Pricing",    
-    "lastName": "Last Name",
-    "lastNamePlaceholder": "Doe",
-    "firstName": "First Name",
-    "firstNamePlaceholder": "John",
     "companyName": "Organization Name",
-    "companyPlaceholder": "My Company",
-    "passwordHint": "Minimum 8 characters, one uppercase, one lowercase and one number",
-    "or": "OR"
+    "passwordHint": "Minimum 8 characters, one uppercase, one lowercase, one number and one special character (!@#$%^&*?:_-).",
+    "or": "OR",
+    "privacyPolicy": "Privacy policy",
+    "termsOfService": "Terms of service",
+    "lastUpdated": "Last updated",
+    "loading": "Loading...",
+    "creating": "Creating..."
+  },
+  "Placeholder": {
+    "email": "your@email.com",
+    "password": "Your password",
+    "lastName": "Doe",
+    "firstName": "John",
+    "company": "My Company"
   },
   "Navbar": {},
   "HomePage": {
@@ -52,11 +51,10 @@
   "PricingPage": {
     "subtitle": "Pricing page - to be implemented"
   },
-  "ThemeToggle": {
-    "theme": "Theme",
-    "light": "Light",
-    "dark": "Dark",
-    "system": "System"
+  "ThemeToggle": {    
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "system": "System mode"
   },
   "RegisterPage": {
     "subtitle": "Create your Nexus account",
@@ -65,13 +63,11 @@
     "continueWithGoogle": "Continue with Google",
     "cta_login": "Do you already have an account?",
     "backToEmail": "Change email",
-    "createAccount": "Create account",
-    "loading": "Loading...",
-    "creating": "Creating...",
-    "termsPrefix": "By continuing you accept the",    
+    "createAccount": "Create account",    
+    "termsPrefix": "By continuing you accept the",
     "hasAccount": "Already have an account?"
   },
-  "Errors": {
+  "Error": {
     "emailRequired": "Email is required",
     "emailInvalid": "Please enter a valid email",
     "firstNameRequired": "First name is required",
@@ -80,7 +76,7 @@
     "lastNameTooShort": "Last name must be at least 2 characters",
     "passwordRequired": "Password is required",
     "passwordTooShort": "Password must be at least 8 characters",
-    "passwordWeak": "Password must contain one uppercase, one lowercase and one number",
+    "passwordWeak": "Password must contain one uppercase, one lowercase, one number and one special character (!@#$%^&*?:_-).",
     "organizationRequired": "Organization name is required",
     "organizationTooShort": "Organization name must be at least 3 characters",
     "registrationFailed": "Registration failed. Please try again later.",
@@ -91,7 +87,6 @@
   },
 
   "TermsPage": {
-    "lastUpdated": "Last updated",
     "introduction": "Welcome to Nexus. By using our services, you agree to be bound by these Terms of Service. Please read them carefully.",
     "section1Title": "Acceptance of Terms",
     "section1Content": "By accessing and using Nexus, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use our services.",
@@ -106,8 +101,7 @@
     "contactTitle": "Contact Us",
     "contactContent": "For questions about the Terms of Service, contact us at:"
   },
-  "PrivacyPage": {
-    "lastUpdated": "Last updated",
+  "PrivacyPage": {    
     "introduction": "Nexus is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information.",
     "section1Title": "Information We Collect",
     "section1Content": "We collect information you provide directly, such as name, email, and organization information during registration. We also collect usage information through cookies and similar technologies.",
@@ -156,10 +150,7 @@
     "sort": "Sort",
     "status": "Status",
     "priority": "Priority",
-    "dueDate": "Due date",
-    "startDate": "Start date",
-    "endDate": "End date",
-    "assignedTo": "Assigned to",
+    "dueDate": "Due date",    
     "description": "Description",
     "comments": "Comments",
     "attachments": "Attachments",
@@ -178,40 +169,34 @@
     "add": "Add",
     "new": "New",
     "old": "Old",
-    "openTasks": "Open tasks",
-    "completedTasks": "Completed tasks",
-    "inProgress": "In progress",
-    "onHold": "On hold",
     "completed": "Completed",
     "title": "Title",
     "name": "Name",
     "email": "Email",
     "password": "Password",
-    "confirmPassword": "Confirm password",
     "language": "Language",
     "theme": "Theme",
-    "darkMode": "Dark mode",
-    "lightMode": "Light mode",
-    "systemMode": "System",
     "actions": "Actions",
     "details": "Details",
     "history": "History",
-    "notificationSettings": "Notification settings",
     "help": "Help",
     "support": "Support",
-    "privacyPolicy": "Privacy policy",
-    "termsOfService": "Terms of service",
     "feedback": "Feedback",
     "error": "Error",
     "success": "Success",
     "loading": "Loading",
-    "noResults": "No results",
     "required": "Required",
     "optional": "Optional",
     "retry": "Retry",
     "yes": "Yes",
     "no": "No",
     "signup": "Sign Up",
-    "and": "and"
+    "and": "and",
+    "pricing": "Pricing",
+    "lastName": "Last Name",
+    "firstName": "First Name",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
   }
 }

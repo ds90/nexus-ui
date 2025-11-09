@@ -1,21 +1,20 @@
 {
   "General": {
-    "support": "Supporto",
-    "login": "Accedi",
-    "register": "Registrati",
-    "email": "Email",
-    "email_placeholder": "tua@email.com",
-    "password": "Password",
-    "password_placeholder": "La tua password",
-    "pricing": "Prezzi",    
-    "lastName": "Cognnome",
-    "lastNamePlaceholder": "Rossi",
-    "firstName": "Nome",
-    "firstNamePlaceholder": "Mario",
     "companyName": "Nome Azienda",
-    "companyPlaceholder": "La mia azienda",    
-    "passwordHint": "Minimo 8 caratteri, una maiuscola, una minuscola e un numero",
-    "or": "O"
+    "passwordHint": "Minimo 8 caratteri, una maiuscola, una minuscola, un numero e un carattere spciale (!@#$%^&*?:_-).",
+    "or": "O",
+    "privacyPolicy": "Informativa privacy",
+    "termsOfService": "Termini di servizio",
+    "lastUpdated": "Ultimo aggiornamento",
+    "loading": "Caricamento...",
+    "creating": "Creazione in corso..."
+  },
+  "Placeholder": {
+    "email": "tua@email.com",
+    "password": "La tua password",
+    "lastName": "Rossi",
+    "firstName": "Mario",
+    "company": "La mia azienda"
   },
   "Navbar": {},
   "HomePage": {
@@ -52,8 +51,7 @@
   "PricingPage": {
     "subtitle": "Pagina prezzi - da implementare"
   },
-  "ThemeToggle": {
-    "theme": "Tema",
+  "ThemeToggle": {    
     "light": "Chiaro",
     "dark": "Scuro",
     "system": "Sistema"
@@ -65,13 +63,11 @@
     "continueWithGoogle": "Continua con Google",
     "cta_login": "Hai gia un account?",
     "backToEmail": "Cambia email",
-    "createAccount": "Crea account",
-    "loading": "Caricamento...",
-    "creating": "Creazione in corso...",
+    "createAccount": "Crea account",    
     "termsPrefix": "Continuando accetti i",
     "hasAccount": "Hai già un account?"
   },
-  "Errors": {
+  "Error": {
     "emailRequired": "L'email è obbligatoria",
     "emailInvalid": "Inserisci un'email valida",
     "firstNameRequired": "Il nome è obbligatorio",
@@ -80,7 +76,7 @@
     "lastNameTooShort": "Il cognome deve contenere almeno 2 caratteri",
     "passwordRequired": "La password è obbligatoria",
     "passwordTooShort": "La password deve contenere almeno 8 caratteri",
-    "passwordWeak": "La password deve contenere una maiuscola, una minuscola e un numero",
+    "passwordWeak": "La password deve contenere una maiuscola, una minuscola, un numero e un carattere speciale (!@#$%^&*?:_-).",
     "organizationRequired": "Il nome dell'organizzazione è obbligatorio",
     "organizationTooShort": "Il nome dell'organizzazione deve contenere almeno 3 caratteri",
     "registrationFailed": "Registrazione fallita. Riprova più tardi.",
@@ -91,7 +87,6 @@
   },
 
   "TermsPage": {
-    "lastUpdated": "Ultimo aggiornamento",
     "introduction": "Benvenuto su Nexus. Utilizzando i nostri servizi, accetti di essere vincolato da questi Termini di Servizio. Si prega di leggerli attentamente.",
     "section1Title": "Accettazione dei Termini",
     "section1Content": "Accedendo e utilizzando Nexus, accetti di essere vincolato da questi Termini di Servizio e dalla nostra Informativa sulla Privacy. Se non accetti questi termini, non utilizzare i nostri servizi.",
@@ -107,7 +102,6 @@
     "contactContent": "Per domande sui Termini di Servizio, contattaci a:"
   },
   "PrivacyPage": {
-    "lastUpdated": "Ultimo aggiornamento",
     "introduction": "Nexus si impegna a proteggere la tua privacy. Questa Informativa sulla Privacy spiega come raccogliamo, utilizziamo e proteggiamo le tue informazioni personali.",
     "section1Title": "Informazioni che Raccogliamo",
     "section1Content": "Raccogliamo informazioni che fornisci direttamente, come nome, email, e informazioni dell'organizzazione durante la registrazione. Raccogliamo anche informazioni sull'utilizzo del servizio attraverso cookie e tecnologie simili.",
@@ -157,9 +151,6 @@
     "status": "Stato",
     "priority": "Priorità",
     "dueDate": "Scadenza",
-    "startDate": "Data inizio",
-    "endDate": "Data fine",
-    "assignedTo": "Assegnato a",
     "description": "Descrizione",
     "comments": "Commenti",
     "attachments": "Allegati",
@@ -178,40 +169,34 @@
     "add": "Aggiungi",
     "new": "Nuovo",
     "old": "Vecchio",
-    "openTasks": "Attività aperte",
-    "completedTasks": "Attività completate",
-    "inProgress": "In corso",
-    "onHold": "In attesa",
     "completed": "Completato",
     "title": "Titolo",
     "name": "Nome",
     "email": "Email",
     "password": "Password",
-    "confirmPassword": "Conferma password",
     "language": "Lingua",
     "theme": "Tema",
-    "darkMode": "Modalità scura",
-    "lightMode": "Modalità chiara",
-    "systemMode": "Sistema",
     "actions": "Azioni",
     "details": "Dettagli",
     "history": "Cronologia",
-    "notificationSettings": "Impostazioni notifiche",
     "help": "Aiuto",
     "support": "Supporto",
-    "privacyPolicy": "Informativa privacy",
-    "termsOfService": "Termini di servizio",
     "feedback": "Feedback",
     "error": "Errore",
     "success": "Successo",
     "loading": "Caricamento",
-    "noResults": "Nessun risultato",
     "required": "Obbligatorio",
     "optional": "Facoltativo",
     "retry": "Riprova",
     "yes": "Sì",
     "no": "No",
     "signup": "Iscriviti",
-    "and": "e"
+    "and": "e",
+    "pricing": "Prezzi",
+    "lastName": "Cognnome",
+    "firstName": "Nome",    
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "system": "Sistema"
   }
 }

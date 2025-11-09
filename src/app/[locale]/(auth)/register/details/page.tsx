@@ -13,8 +13,9 @@ export default function RegisterDetailsPage() {
 
   const d = useTranslations("Dictionary");
   const g = useTranslations("General");
+  const e = useTranslations("Error");
+  const p = useTranslations("Placeholder");
   const t = useTranslations("RegisterPage");
-  const te = useTranslations("Errors");
 
   // Estrai il locale dal pathname
   const locale = pathname.split('/')[1];
@@ -52,11 +53,11 @@ export default function RegisterDetailsPage() {
   // First name validation
   const validateFirstName = (name: string): boolean => {
     if (!name || name.trim().length === 0) {
-      setFirstNameError(te("firstNameRequired"));
+      setFirstNameError(e("firstNameRequired"));
       return false;
     }
     if (name.trim().length < 2) {
-      setFirstNameError(te("firstNameTooShort"));
+      setFirstNameError(e("firstNameTooShort"));
       return false;
     }
     setFirstNameError("");
@@ -66,11 +67,11 @@ export default function RegisterDetailsPage() {
   // Last name validation
   const validateLastName = (name: string): boolean => {
     if (!name || name.trim().length === 0) {
-      setLastNameError(te("lastNameRequired"));
+      setLastNameError(e("lastNameRequired"));
       return false;
     }
     if (name.trim().length < 2) {
-      setLastNameError(te("lastNameTooShort"));
+      setLastNameError(e("lastNameTooShort"));
       return false;
     }
     setLastNameError("");
@@ -80,20 +81,21 @@ export default function RegisterDetailsPage() {
   // Password validation
   const validatePassword = (password: string): boolean => {
     if (!password) {
-      setPasswordError(te("passwordRequired"));
+      setPasswordError(e("passwordRequired"));
       return false;
     }
     if (password.length < 8) {
-      setPasswordError(te("passwordTooShort"));
+      setPasswordError(e("passwordTooShort"));
       return false;
     }
     // Check for at least one uppercase, one lowercase, one number
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
     const hasNumber = /[0-9]/.test(password);
+    const hasSpecialChar = /[!@#$%^&*?:_\-]/.test(password);
 
-    if (!hasUppercase || !hasLowercase || !hasNumber) {
-      setPasswordError(te("passwordWeak"));
+    if (!hasUppercase || !hasLowercase || !hasNumber || !hasSpecialChar) {
+      setPasswordError(e("passwordWeak"));
       return false;
     }
     setPasswordError("");
@@ -103,11 +105,11 @@ export default function RegisterDetailsPage() {
   // Organization name validation
   const validateOrganization = (name: string): boolean => {
     if (isOrganization && (!name || name.trim().length === 0)) {
-      setOrganizationError(te("organizationRequired"));
+      setOrganizationError(e("organizationRequired"));
       return false;
     }
     if (isOrganization && name.trim().length < 3) {
-      setOrganizationError(te("organizationTooShort"));
+      setOrganizationError(e("organizationTooShort"));
       return false;
     }
     setOrganizationError("");
@@ -165,11 +167,11 @@ export default function RegisterDetailsPage() {
       if (error.response?.data?.message) {
         setGeneralError(error.response.data.message);
       } else if (error.response?.status === 400) {
-        setGeneralError(te("emailAlreadyExists"));
+        setGeneralError(e("emailAlreadyExists"));
       } else if (error.response?.status === 500) {
-        setGeneralError(te("serverError"));
+        setGeneralError(e("serverError"));
       } else {
-        setGeneralError(te("registrationFailed"));
+        setGeneralError(e("registrationFailed"));
       }
     } finally {
       setIsLoading(false);
@@ -221,7 +223,7 @@ export default function RegisterDetailsPage() {
           {/* First Name */}
           <div>
             <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
-              {g("firstName")}
+              {d("firstName")}
             </label>
             <input
               id="firstName"
@@ -233,7 +235,7 @@ export default function RegisterDetailsPage() {
               }}
               onBlur={() => validateFirstName(firstName)}
               disabled={isLoading}
-              placeholder={g("firstNamePlaceholder")}
+              placeholder={p("firstName")}
               className={`w-full px-4 py-3 bg-background border-2 rounded-lg focus:outline-none focus:ring-2 transition-all ${
                 firstNameError
                   ? "border-red-500 focus:ring-red-500 focus:border-red-500"
@@ -249,7 +251,7 @@ export default function RegisterDetailsPage() {
           {/* Last Name */}
           <div>
             <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
-              {g("lastName")}
+              {d("lastName")}
             </label>
             <input
               id="lastName"
@@ -261,7 +263,7 @@ export default function RegisterDetailsPage() {
               }}
               onBlur={() => validateLastName(lastName)}
               disabled={isLoading}
-              placeholder={g("lastNamePlaceholder")}
+              placeholder={p("lastName")}
               className={`w-full px-4 py-3 bg-background border-2 rounded-lg focus:outline-none focus:ring-2 transition-all ${
                 lastNameError
                   ? "border-red-500 focus:ring-red-500 focus:border-red-500"
@@ -290,7 +292,7 @@ export default function RegisterDetailsPage() {
                 }}
                 onBlur={() => validatePassword(password)}
                 disabled={isLoading}
-                placeholder={g("password_placeholder")}
+                placeholder={p("password")}
                 className={`w-full px-4 py-3 pr-12 bg-background border-2 rounded-lg focus:outline-none focus:ring-2 transition-all ${
                   passwordError
                     ? "border-red-500 focus:ring-red-500 focus:border-red-500"
@@ -356,7 +358,7 @@ export default function RegisterDetailsPage() {
                 }}
                 onBlur={() => validateOrganization(organizationName)}
                 disabled={isLoading}
-                placeholder={g("companyPlaceholder")}
+                placeholder={p("company")}
                 className={`w-full px-4 py-3 bg-background border-2 rounded-lg focus:outline-none focus:ring-2 transition-all ${
                   organizationError
                     ? "border-red-500 focus:ring-red-500 focus:border-red-500"
@@ -392,7 +394,7 @@ export default function RegisterDetailsPage() {
             }
             className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm mt-6"
           >
-            {isLoading ? t("creating") : t("createAccount")}
+            {isLoading ? g("creating") : t("createAccount")}
           </button>
         </form>
 
@@ -404,14 +406,14 @@ export default function RegisterDetailsPage() {
               href={`/${locale}/terms`}
               className="text-primary hover:underline"
             >
-              {d("termsOfService")}
+              {g("termsOfService")}
             </Link>{" "}
             {d("and")}{" "}
             <Link
               href={`/${locale}/privacy`}
               className="text-primary hover:underline"
             >
-              {d("privacyPolicy")}
+              {g("privacyPolicy")}
             </Link>
           </p>
         </div>

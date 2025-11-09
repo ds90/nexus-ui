@@ -12,7 +12,7 @@ import ThemeMenu from "../mobile/ThemeMenu";
 import LanguageMenu from "../mobile/LanguageMenu";
 
 export default function Navbar() {
-  const g = useTranslations("General");
+  const g = useTranslations("Dictionary");
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState<"theme" | "language" | null>(

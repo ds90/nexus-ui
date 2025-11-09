@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Naming convention
+- Components                    = PascalCase
+- File name e cartelle          = kebab-case
+- Proprietà Oggetti Variabili   = camelCase
+- Classe, Tipi ecc              = PascalCase
+- Costante GLOBALE              = UPPER_SNAKE_CASE
+
+## Traduzioni
+- (d) = "Dictionary" = dizionario di sole parole, tutte le parole singole NO FRASI
+- (g) = "General" = frasi comuni riutilizzate nel UI
+- (p) = "Placeholder" = tutti i placeholder
+- (e) = (Error) = errori
+- (t) = "SezioneSpecifica" = frasi utili solo alla pagina
 
 ## Getting Started
 

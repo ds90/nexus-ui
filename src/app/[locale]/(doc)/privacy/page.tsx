@@ -12,10 +12,10 @@ export default function PrivacyPage() {
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-2">
-              {g("privacyInfo")}
+              {g("privacyPolicy")}
             </h1>
             <p className="text-muted-foreground">
-              {t("lastUpdated")}: 8 Novembre 2025
+              {g("lastUpdated")}: 8 Novembre 2025
             </p>
           </div>
 
