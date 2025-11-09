@@ -1,7 +1,19 @@
 {
-    "i18n-ally.localesPaths": [
-        "messages"
-    ],
-    "i18n-ally.sourceLanguage": "it",
-    "i18n-ally.keystyle": "flat"
+  "i18n-ally.localesPaths": ["messages"],
+  "i18n-ally.sourceLanguage": "it",
+  "i18n-ally.keystyle": "flat",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

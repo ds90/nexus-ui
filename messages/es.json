@@ -43,9 +43,8 @@
     "subtitle": "¡Bienvenido de nuevo! Inicia sesión en tu cuenta",
     "button_loading": "Iniciando sesión...",
     "noAccount": "¿No tienes una cuenta?",
-    "register_link": "Regístrate ahora"
-    ,
-    "loginWithGoogle": "Iniciar sesión con Google"    
+    "register_link": "Regístrate ahora",
+    "loginWithGoogle": "Iniciar sesión con Google"
   },
   "SupportPage": {
     "subtitle": "Página de soporte - por implementar"
@@ -78,7 +77,7 @@
     "lastNameTooShort": "El apellido debe tener al menos 2 caracteres",
     "passwordRequired": "La contraseña es obligatoria",
     "passwordTooShort": "La contraseña debe tener al menos 8 caracteres",
-    "passwordWeak": "La contraseña debe contener una mayúscula, una minúscula, un número y un carácter especial (!@#$%^&*?:_-).",    
+    "passwordWeak": "La contraseña debe contener una mayúscula, una minúscula, un número y un carácter especial (!@#$%^&*?:_-).",
     "organizationRequired": "El nombre de la organización es obligatorio",
     "organizationTooShort": "El nombre de la organización debe tener al menos 3 caracteres",
     "registrationFailed": "Registro fallido. Inténtalo de nuevo más tarde.",
@@ -177,7 +176,7 @@
     "email": "Correo electrónico",
     "password": "Contraseña",
     "language": "Idioma",
-    "theme": "Tema", 
+    "theme": "Tema",
     "actions": "Acciones",
     "details": "Detalles",
     "history": "Historial",
@@ -199,6 +198,8 @@
     "firstName": "Nombre",
     "light": "Claro",
     "dark": "Oscuro",
-    "system": "Sistema"
+    "system": "Sistema",
+    "company": "Empresa",
+    "assets": "Assets"
   }
 }

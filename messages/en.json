@@ -44,7 +44,7 @@
     "button_loading": "Logging in...",
     "noAccount": "Don't have an account?",
     "register_link": "Sign up now",
-    "loginWithGoogle": "Sign in with Google"    
+    "loginWithGoogle": "Sign in with Google"
   },
   "SupportPage": {
     "subtitle": "Support page - to be implemented"
@@ -52,7 +52,7 @@
   "PricingPage": {
     "subtitle": "Pricing page - to be implemented"
   },
-  "ThemeToggle": {    
+  "ThemeToggle": {
     "light": "Light mode",
     "dark": "Dark mode",
     "system": "System mode"
@@ -64,7 +64,7 @@
     "continueWithGoogle": "Continue with Google",
     "cta_login": "Do you already have an account?",
     "backToEmail": "Change email",
-    "createAccount": "Create account",    
+    "createAccount": "Create account",
     "termsPrefix": "By continuing you accept the",
     "hasAccount": "Already have an account?"
   },
@@ -102,7 +102,7 @@
     "contactTitle": "Contact Us",
     "contactContent": "For questions about the Terms of Service, contact us at:"
   },
-  "PrivacyPage": {    
+  "PrivacyPage": {
     "introduction": "Nexus is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information.",
     "section1Title": "Information We Collect",
     "section1Content": "We collect information you provide directly, such as name, email, and organization information during registration. We also collect usage information through cookies and similar technologies.",
@@ -151,7 +151,7 @@
     "sort": "Sort",
     "status": "Status",
     "priority": "Priority",
-    "dueDate": "Due date",    
+    "dueDate": "Due date",
     "description": "Description",
     "comments": "Comments",
     "attachments": "Attachments",
@@ -198,6 +198,8 @@
     "firstName": "First Name",
     "light": "Light",
     "dark": "Dark",
-    "system": "System"
+    "system": "System",
+    "company": "Company",
+    "assets": "Assets"
   }
 }

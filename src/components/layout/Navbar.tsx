@@ -1,98 +1,96 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import Logo from "../ui/Logo";
-import ThemeToggle from "../ui/ThemeToggle";
-import LanguageSelector from "../ui/LanguageSelector";
-import ThemeMenu from "../mobile/ThemeMenu";
-import LanguageMenu from "../mobile/LanguageMenu";
+import Link from "next/link"
+import { useTranslations } from "next-intl"
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Menu, X } from "lucide-react"
+import Logo from "../ui/Logo"
+import ThemeToggle from "../ui/ThemeToggle"
+import LanguageSelector from "../ui/LanguageSelector"
+import ThemeMenu from "../mobile/ThemeMenu"
+import LanguageMenu from "../mobile/LanguageMenu"
 
 export default function Navbar() {
-  const g = useTranslations("Dictionary");
+  const d = useTranslations("Dictionary")
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [expandedMenu, setExpandedMenu] = useState<"theme" | "language" | null>(
-    null
-  );
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [expandedMenu, setExpandedMenu] = useState<"theme" | "language" | null>(null)
 
   // Chiudi menu quando ridimensiono
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && isMenuOpen) {
-        setIsMenuOpen(false);
+        setIsMenuOpen(false)
       }
-    };
+    }
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [isMenuOpen]);
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [isMenuOpen])
 
   // Blocca scroll quando menu aperto
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden"
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "unset"
     }
 
     return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isMenuOpen]);
+      document.body.style.overflow = "unset"
+    }
+  }, [isMenuOpen])
 
   // Chiudi menu quando si clicca un link
   const closeMenu = () => {
-    setIsMenuOpen(false);
-    setExpandedMenu(null);
-  };
+    setIsMenuOpen(false)
+    setExpandedMenu(null)
+  }
 
   // Toggle submenu
   const toggleSubmenu = (menu: "theme" | "language") => {
-    setExpandedMenu(expandedMenu === menu ? null : menu);
-  };
+    setExpandedMenu(expandedMenu === menu ? null : menu)
+  }
 
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-card border-b border-border sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+      <nav className="sticky top-0 z-50 border-b border-border bg-card">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Logo />
 
             {/* Desktop Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden items-center space-x-8 md:flex">
               <Link
                 href="/support"
-                className="text-foreground hover:bg-muted px-4 py-2 rounded-lg transition-colors"
+                className="rounded-lg px-4 py-2 text-foreground transition-colors hover:bg-muted"
               >
-                {g("support")}
+                {d("support")}
               </Link>
               <Link
                 href="/price"
-                className="text-foreground hover:bg-muted px-4 py-2 rounded-lg transition-colors"
+                className="rounded-lg px-4 py-2 text-foreground transition-colors hover:bg-muted"
               >
-                {g("pricing")}
+                {d("pricing")}
               </Link>
             </div>
 
             {/* Desktop Auth Buttons */}
-            <div className="hidden md:flex items-center space-x-2">
+            <div className="hidden items-center space-x-2 md:flex">
               <Link
                 href="/login"
-                className="text-foreground hover:bg-muted px-4 py-2 rounded-lg transition-colors font-medium"
+                className="rounded-lg px-4 py-2 font-medium text-foreground transition-colors hover:bg-muted"
               >
-                {g("login")}
+                {d("login")}
               </Link>
               <Link
                 href="/register"
-                className="bg-fixed-secondary text-white px-4 py-2 rounded-lg transform hover:scale-105 hover:shadow-md transition-all duration-200 font-medium"
+                className="transform rounded-lg bg-fixed-secondary px-4 py-2 font-medium text-white transition-all duration-200 hover:scale-105 hover:shadow-md"
               >
-                {g("register")}
+                {d("register")}
               </Link>
               <ThemeToggle />
               <LanguageSelector />
@@ -101,10 +99,10 @@ export default function Navbar() {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setIsMenuOpen(true)}
-              className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+              className="rounded-lg p-2 transition-colors hover:bg-muted md:hidden"
               aria-label="Open menu"
             >
-              <Menu className="w-6 h-6 text-foreground" />
+              <Menu className="h-6 w-6 text-foreground" />
             </button>
           </div>
         </div>
@@ -121,7 +119,7 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={closeMenu}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 md:hidden"
+              className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm md:hidden"
             />
 
             {/* Sidebar */}
@@ -135,65 +133,65 @@ export default function Navbar() {
               dragElastic={0.2}
               onDragEnd={(e, info) => {
                 if (info.offset.x > 100) {
-                  closeMenu();
+                  closeMenu()
                 }
               }}
-              className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-card border-l border-border z-50 md:hidden overflow-y-auto"
+              className="fixed bottom-0 right-0 top-0 z-50 w-80 max-w-[85vw] overflow-y-auto border-l border-border bg-card md:hidden"
             >
               {/* Header con Close Button */}
-              <div className="flex justify-between items-center p-6 border-b border-border">
+              <div className="flex items-center justify-between border-b border-border p-6">
                 <Logo />
                 <button
                   onClick={closeMenu}
-                  className="p-2 rounded-lg hover:bg-muted transition-colors"
+                  className="rounded-lg p-2 transition-colors hover:bg-muted"
                   aria-label="Close menu"
                 >
-                  <X className="w-6 h-6 text-foreground" />
+                  <X className="h-6 w-6 text-foreground" />
                 </button>
               </div>
 
               {/* Auth Buttons */}
-              <div className="flex flex-col p-6 space-y-3">
+              <div className="flex flex-col space-y-3 p-6">
                 <Link
                   href="/login"
-                  className="w-full text-center px-4 py-3 rounded-lg border-2 border-foreground text-foreground hover:bg-muted transition-colors font-medium"
+                  className="w-full rounded-lg border-2 border-foreground px-4 py-3 text-center font-medium text-foreground transition-colors hover:bg-muted"
                 >
-                  {g("login")}
+                  {d("login")}
                 </Link>
                 <Link
                   href="/register"
-                  className="w-full text-center px-4 py-3 rounded-lg bg-fixed-secondary text-white hover:bg-fixed-secondary/80 transition-colors font-medium"
+                  className="hover:bg-fixed-secondary/80 w-full rounded-lg bg-fixed-secondary px-4 py-3 text-center font-medium text-white transition-colors"
                 >
-                  {g("register")}
+                  {d("register")}
                 </Link>
               </div>
 
               {/* Divider */}
-              <div className="border-t border-border mx-6" />
+              <div className="mx-6 border-t border-border" />
 
               {/* Navigation Links */}
-              <div className="flex flex-col p-6 space-y-1">
+              <div className="flex flex-col space-y-1 p-6">
                 <Link
                   href="/support"
                   onClick={closeMenu}
-                  className="px-4 py-3 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
+                  className="rounded-lg px-4 py-3 font-medium text-foreground transition-colors hover:bg-muted"
                 >
-                  {g("support")}
+                  {d("support")}
                 </Link>
                 <Link
                   href="/price"
                   onClick={closeMenu}
-                  className="px-4 py-3 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
+                  className="rounded-lg px-4 py-3 font-medium text-foreground transition-colors hover:bg-muted"
                 >
-                  {g("pricing")}
+                  {d("pricing")}
                 </Link>
               </div>
 
               {/* Divider */}
-              <div className="border-t border-border mx-6" />
+              <div className="mx-6 border-t border-border" />
 
               {/* Theme + Language Controls */}
-              <div className="p-6 space-y-2">
+              <div className="space-y-2 p-6">
                 {/* Theme Menu */}
                 <ThemeMenu
                   isExpanded={expandedMenu === "theme"}
@@ -212,5 +210,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </>
-  );
+  )
 }

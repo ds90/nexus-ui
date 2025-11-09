@@ -44,7 +44,7 @@
     "button_loading": "Accesso in corso...",
     "noAccount": "Non hai un account?",
     "register_link": "Registrati ora",
-    "loginWithGoogle": "Accedi con Google"    
+    "loginWithGoogle": "Accedi con Google"
   },
   "SupportPage": {
     "subtitle": "Pagina supporto - da implementare"
@@ -52,7 +52,7 @@
   "PricingPage": {
     "subtitle": "Pagina prezzi - da implementare"
   },
-  "ThemeToggle": {    
+  "ThemeToggle": {
     "light": "Chiaro",
     "dark": "Scuro",
     "system": "Sistema"
@@ -64,7 +64,7 @@
     "continueWithGoogle": "Continua con Google",
     "cta_login": "Hai gia un account?",
     "backToEmail": "Cambia email",
-    "createAccount": "Crea account",    
+    "createAccount": "Crea account",
     "termsPrefix": "Continuando accetti i",
     "hasAccount": "Hai già un account?"
   },
@@ -195,9 +195,11 @@
     "and": "e",
     "pricing": "Prezzi",
     "lastName": "Cognnome",
-    "firstName": "Nome",    
+    "firstName": "Nome",
     "light": "Chiaro",
     "dark": "Scuro",
-    "system": "Sistema"
+    "system": "Sistema",
+    "company": "Azienda",
+    "assets": "Assets"
   }
 }

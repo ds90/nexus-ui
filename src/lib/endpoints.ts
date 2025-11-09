@@ -14,6 +14,6 @@ export const API_ENDPOINTS = {
   },
 
   USER: {
-    PROFILE: '/api/organization/{id}',
+    PROFILE: '/api/profile',
   },
 } as const;
